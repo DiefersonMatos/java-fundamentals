@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SetExample.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">java-fundamentals</a> &gt; <a href="index.source.html" class="el_package">com.matos.fundamentals.collecttions.set</a> &gt; <span class="el_source">SetExample.java</span></div><h1>SetExample.java</h1><pre class="source lang-java linenums">package com.matos.fundamentals.collecttions.set;
+
+import java.util.HashSet;
+import java.util.Set;
+
+/**
+ * Demonstrates usage of Set in Java using HashSet.
+ * A Set does not allow duplicate elements and has no guaranteed order.
+ */
+<span class="fc" id="L10">public class SetExample {</span>
+
+    /**
+     * Adds several names to a set and demonstrates uniqueness.
+     *
+     * @return a set containing unique names
+     */
+    public Set&lt;String&gt; createUniqueNameSet() {
+<span class="fc" id="L18">        Set&lt;String&gt; names = new HashSet&lt;&gt;();</span>
+
+<span class="fc" id="L20">        names.add(&quot;Alice&quot;);</span>
+<span class="fc" id="L21">        names.add(&quot;Bob&quot;);</span>
+<span class="fc" id="L22">        names.add(&quot;Charlie&quot;);</span>
+<span class="fc" id="L23">        names.add(&quot;Alice&quot;); // Duplicate, will not be added</span>
+
+<span class="fc" id="L25">        return names;</span>
+    }
+
+    /**
+     * Checks if a name exists in the set.
+     *
+     * @param set  the set of names
+     * @param name the name to search for
+     * @return true if the name is present, false otherwise
+     */
+    public boolean containsName(Set&lt;String&gt; set, String name) {
+<span class="fc" id="L36">        return set.contains(name);</span>
+    }
+
+    /**
+     * Removes a name from the set.
+     *
+     * @param set  the set of names
+     * @param name the name to remove
+     * @return true if the name was removed, false if it did not exist
+     */
+    public boolean removeName(Set&lt;String&gt; set, String name) {
+<span class="fc" id="L47">        return set.remove(name);</span>
+    }
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MapExample.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">java-fundamentals</a> &gt; <a href="index.source.html" class="el_package">com.matos.fundamentals.collecttions.map</a> &gt; <span class="el_source">MapExample.java</span></div><h1>MapExample.java</h1><pre class="source lang-java linenums">package com.matos.fundamentals.collecttions.map;
+
+import java.util.HashMap;
+import java.util.Map;
+
+/**
+ * Demonstrates usage of Map in Java using HashMap.
+ * A Map stores key-value pairs. Keys are unique, but values can be duplicated.
+ */
+<span class="fc" id="L10">public class MapExample {</span>
+
+    /**
+     * Creates a map of country codes to country names.
+     *
+     * @return a populated HashMap with country codes
+     */
+    public Map&lt;String, String&gt; createCountryCodeMap() {
+<span class="fc" id="L18">        Map&lt;String, String&gt; countryMap = new HashMap&lt;&gt;();</span>
+
+<span class="fc" id="L20">        countryMap.put(&quot;PT&quot;, &quot;Portugal&quot;);</span>
+<span class="fc" id="L21">        countryMap.put(&quot;FR&quot;, &quot;France&quot;);</span>
+<span class="fc" id="L22">        countryMap.put(&quot;DE&quot;, &quot;Germany&quot;);</span>
+
+<span class="fc" id="L24">        return countryMap;</span>
+    }
+
+    /**
+     * Retrieves a country name by its code.
+     *
+     * @param map       the map of country codes
+     * @param code      the country code
+     * @return the country name or null if not found
+     */
+    public String getCountryByCode(Map&lt;String, String&gt; map, String code) {
+<span class="fc" id="L35">        return map.get(code);</span>
+    }
+
+    /**
+     * Updates or adds a country in the map.
+     *
+     * @param map        the map of country codes
+     * @param code       the country code
+     * @param country    the country name
+     */
+    public void addOrUpdateCountry(Map&lt;String, String&gt; map, String code, String country) {
+<span class="fc" id="L46">        map.put(code, country);</span>
+<span class="fc" id="L47">    }</span>
+
+    /**
+     * Removes a country by code.
+     *
+     * @param map   the map of country codes
+     * @param code  the code to remove
+     * @return true if the element was removed, false otherwise
+     */
+    public boolean removeCountryByCode(Map&lt;String, String&gt; map, String code) {
+<span class="fc bfc" id="L57" title="All 2 branches covered.">        return map.remove(code) != null;</span>
+    }
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

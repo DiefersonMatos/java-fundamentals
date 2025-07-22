@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ListExample.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">java-fundamentals</a> &gt; <a href="index.source.html" class="el_package">com.matos.fundamentals.collecttions.list</a> &gt; <span class="el_source">ListExample.java</span></div><h1>ListExample.java</h1><pre class="source lang-java linenums">package com.matos.fundamentals.collecttions.list;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+/**
+ * Demonstrates common operations on Java List (ArrayList).
+ * Shows adding, removing, updating, iterating, sorting, and searching.
+ */
+<span class="fc" id="L11">public class ListExample {</span>
+
+    /**
+     * Creates a list of fruits and performs add, remove, update, sort and search operations.
+     *
+     * @return the final list after operations
+     */
+    public List&lt;String&gt; manipulateList() {
+<span class="fc" id="L19">        List&lt;String&gt; list = new ArrayList&lt;&gt;();</span>
+        // Add elements
+<span class="fc" id="L21">        list.add(&quot;Apple&quot;);</span>
+<span class="fc" id="L22">        list.add(&quot;Banana&quot;);</span>
+<span class="fc" id="L23">        list.add(&quot;Cherry&quot;);</span>
+
+        // Remove &quot;Banana&quot;
+<span class="fc" id="L26">        list.remove(&quot;Banana&quot;);</span>
+
+        // Update element at index 1 to &quot;Date&quot;
+<span class="fc" id="L29">        list.set(1, &quot;Date&quot;);</span>
+
+        // Sort the list alphabetically
+<span class="fc" id="L32">        Collections.sort(list);</span>
+
+<span class="fc" id="L34">        return list;</span>
+    }
+
+    /**
+     * Searches for a fruit in the sorted list using binary search.
+     *
+     * @param list sorted list of fruits
+     * @param fruit fruit name to search
+     * @return index of fruit if found, else negative value
+     */
+    public int searchFruit(List&lt;String&gt; list, String fruit) {
+<span class="fc" id="L45">        return Collections.binarySearch(list, fruit);</span>
+    }
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>
