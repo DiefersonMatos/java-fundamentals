@@ -1,0 +1,6 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+java-fundamentals,com.matos.fundamentals.collecttions.map,MapExample,0,43,0,2,0,10,0,6,0,5
+java-fundamentals,com.matos.fundamentals.oop,Cat,0,6,0,0,0,3,0,2,0,2
+java-fundamentals,com.matos.fundamentals.oop,Dog,0,6,0,0,0,3,0,2,0,2
+java-fundamentals,com.matos.fundamentals.collecttions.set,SetExample,0,33,0,0,0,9,0,4,0,4
+java-fundamentals,com.matos.fundamentals.collecttions.list,ListExample,0,36,0,0,0,10,0,3,0,3
